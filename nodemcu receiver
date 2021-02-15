@@ -1,0 +1,15 @@
+#define btn D2 //pin button on pin D2 Nodemcu
+
+void setup() {
+  // put your setup code here, to run once:
+   Serial.begin(115200);
+   pinMode(btn, INPUT_PULLUP);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  int btnState = digitalRead(btn);
+  Serial.println(btnState);
+  delay(300);
+
+}
